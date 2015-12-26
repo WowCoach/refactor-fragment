@@ -5,12 +5,12 @@ import java.util.List;
 
 public class MarsRover {
     // The valid commands (turn left, turn right, move)
-    private static final List<String> valid_commands = Arrays.asList("L", "R", "M");
+    public static final List<String> valid_commands = Arrays.asList("L", "R", "M");
     // The four directions (North, East, South, West)
-    private static final List<String> directions = Arrays.asList("N", "E", "S", "W");
+    public static final List<String> directions = Arrays.asList("N", "E", "S", "W");
 
-    private static final int Y = 1;
-    private static final int X = 0;
+    public static final int Y = 1;
+    public static final int X = 0;
 
     private String d; // direction
     private int[] p; // position
@@ -77,6 +77,5 @@ public class MarsRover {
             }
         }
     }
-
 
 }
