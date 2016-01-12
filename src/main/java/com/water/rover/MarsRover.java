@@ -5,17 +5,20 @@ import java.util.List;
 
 public class MarsRover {
     public static final List<String> valid_commands = Arrays.asList("L", "R", "M");
-    public static final List<String> directions = Arrays.asList("N", "E", "S", "W");
 
     public static final int Y = 1;
     public static final int X = 0;
 
-    private String direction;
     private int[] position;
+
+    private Location location;
+
 
     public MarsRover(int startingX, int startingY, String direction) {
         this.position = new int[]{startingX, startingY};
-        this.direction = direction;
+        location = new Location();
+        this.location.setPosition(new Position(startingX, startingY));
+        this.location.setDirection(Direction.valueOf(direction));
     }
 
     public String run(String input) {
@@ -35,29 +38,34 @@ public class MarsRover {
     }
 
     private void move() {
-        switch (direction) {
-            case "N":
-                position[Y] += +1; break;
-            case "S":
-                position[Y] += -1; break;
-            case "E":
-                position[X] += +1; break;
-            case "W":
-                position[X] += -1; break;
-            default: break;
+        switch (location.getDirection()) {
+            case N:
+                position[Y] += +1;
+                break;
+            case S:
+                position[Y] += -1;
+                break;
+            case E:
+                position[X] += +1;
+                break;
+            case W:
+                position[X] += -1;
+                break;
+            default:
+                break;
         }
     }
 
     private String asString() {
-        return position[X] + " " + position[Y] + " " + direction;
+        return position[X] + " " + position[Y] + " " + location.getDirection().name();
     }
 
     private void turnLeft() {
-        direction = directions.get((directions.indexOf(direction) + 3) % directions.size());
+        location.turnLeft();
     }
 
     private void turnRight() {
-        direction = directions.get((directions.indexOf(direction) + 1) % directions.size());
+        location.turnRight();
     }
 
     private static String[] convertInputIntoCommands(String input) {
