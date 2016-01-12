@@ -6,17 +6,9 @@ import java.util.List;
 public class MarsRover {
     public static final List<String> valid_commands = Arrays.asList("L", "R", "M");
 
-    public static final int Y = 1;
-    public static final int X = 0;
-
-    private int[] position;
-
-    private Location location;
-
+    private Location location = new Location();
 
     public MarsRover(int startingX, int startingY, String direction) {
-        this.position = new int[]{startingX, startingY};
-        location = new Location();
         this.location.setPosition(new Position(startingX, startingY));
         this.location.setDirection(Direction.valueOf(direction));
     }
@@ -38,26 +30,11 @@ public class MarsRover {
     }
 
     private void move() {
-        switch (location.getDirection()) {
-            case N:
-                position[Y] += +1;
-                break;
-            case S:
-                position[Y] += -1;
-                break;
-            case E:
-                position[X] += +1;
-                break;
-            case W:
-                position[X] += -1;
-                break;
-            default:
-                break;
-        }
+        location.move();
     }
 
     private String asString() {
-        return position[X] + " " + position[Y] + " " + location.getDirection().name();
+        return location.asString();
     }
 
     private void turnLeft() {

@@ -37,4 +37,23 @@ public class Location {
     public void turnRight() {
         direction = directions.get((directions.indexOf(direction) + 1) % directions.size());
     }
+
+    public void move() {
+        switch (direction) {
+            case N:
+                position.offsetY(1);
+                break;
+            case S:
+                position.offsetY(-1);
+                break;
+            case E:
+                position.offsetX(1);
+                break;
+            case W:
+                position.offsetX(-1);
+                break;
+            default:
+                break;
+        }
+    }
 }
