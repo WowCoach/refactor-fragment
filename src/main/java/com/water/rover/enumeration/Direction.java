@@ -1,4 +1,4 @@
-package com.water.rover.location;
+package com.water.rover.enumeration;
 
 public enum Direction {
     E("East"),

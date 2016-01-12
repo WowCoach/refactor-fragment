@@ -2,7 +2,7 @@ package com.water.rover.command;
 
 import static com.water.rover.command.LeftCommand.directions;
 
-import com.water.rover.location.Direction;
+import com.water.rover.enumeration.Direction;
 import com.water.rover.location.Location;
 
 public class RightCommand implements ICommand {

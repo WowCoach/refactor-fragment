@@ -1,14 +1,14 @@
 package com.water.rover.command;
 
-import static com.water.rover.location.Direction.E;
-import static com.water.rover.location.Direction.N;
-import static com.water.rover.location.Direction.S;
-import static com.water.rover.location.Direction.W;
+import static com.water.rover.enumeration.Direction.E;
+import static com.water.rover.enumeration.Direction.N;
+import static com.water.rover.enumeration.Direction.S;
+import static com.water.rover.enumeration.Direction.W;
 
 import java.util.Arrays;
 import java.util.List;
 
-import com.water.rover.location.Direction;
+import com.water.rover.enumeration.Direction;
 import com.water.rover.location.Location;
 
 public class LeftCommand implements ICommand {

@@ -1,5 +1,7 @@
 package com.water.rover.location;
 
+import com.water.rover.enumeration.Direction;
+
 public class Location {
     private Direction direction;
     private Position position;

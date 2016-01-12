@@ -1,10 +1,14 @@
 package com.water.rover.util;
 
-import java.util.Arrays;
+import static com.water.rover.enumeration.Command.L;
+import static com.water.rover.enumeration.Command.M;
+import static com.water.rover.enumeration.Command.R;
+import static java.util.Arrays.asList;
+
 import java.util.List;
 
 public class CommandLoader {
-    private static final List<String> valid_commands = Arrays.asList("L", "R", "M");
+    private static final List<String> VALID_COMMANDS = asList(L.name(), R.name(), M.name());
 
     public static String[] convertInputIntoCommands(String input) {
         String[] commandArray = input.split("(?!^)");
@@ -16,7 +20,7 @@ public class CommandLoader {
 
     private static void validateCommands(String input, String[] commandArray) {
         for (String command : commandArray) {
-            if (!valid_commands.contains(command)) {
+            if (!VALID_COMMANDS.contains(command)) {
                 throw new IllegalArgumentException("Invalid command sequence: " + input);
             }
         }
