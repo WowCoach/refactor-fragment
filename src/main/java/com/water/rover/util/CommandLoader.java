@@ -5,6 +5,7 @@ import static com.water.rover.enumeration.Command.M;
 import static com.water.rover.enumeration.Command.R;
 import static java.util.Arrays.asList;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class CommandLoader {
@@ -19,10 +20,8 @@ public class CommandLoader {
     }
 
     private static void validateCommands(String input, String[] commandArray) {
-        for (String command : commandArray) {
-            if (!VALID_COMMANDS.contains(command)) {
-                throw new IllegalArgumentException("Invalid command sequence: " + input);
-            }
+        if (Arrays.stream(commandArray).anyMatch(command -> !VALID_COMMANDS.contains(command))) {
+            throw new IllegalArgumentException("Invalid command sequence: " + input);
         }
     }
 }
