@@ -6,11 +6,10 @@ import java.util.List;
 public class MarsRover {
     public static final List<String> valid_commands = Arrays.asList("L", "R", "M");
 
-    private Location location = new Location();
+    private Location location;
 
     public MarsRover(int startingX, int startingY, String direction) {
-        this.location.setPosition(new Position(startingX, startingY));
-        this.location.setDirection(Direction.valueOf(direction));
+        location = new Location(new Position(startingX, startingY), Direction.valueOf(direction));
     }
 
     public String run(String input) {
