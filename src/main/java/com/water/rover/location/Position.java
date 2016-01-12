@@ -1,4 +1,4 @@
-package com.water.rover;
+package com.water.rover.location;
 
 public class Position {
     public int x;
