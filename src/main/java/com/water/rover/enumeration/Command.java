@@ -5,7 +5,10 @@ public enum Command {
     R("Right"),
     M("Move");
 
+    private String value;
+
     Command(String value) {
 
+        this.value = value;
     }
 }
