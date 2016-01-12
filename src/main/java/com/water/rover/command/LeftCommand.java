@@ -8,7 +8,6 @@ import static com.water.rover.location.Direction.W;
 import java.util.Arrays;
 import java.util.List;
 
-import com.water.rover.command.ICommand;
 import com.water.rover.location.Direction;
 import com.water.rover.location.Location;
 

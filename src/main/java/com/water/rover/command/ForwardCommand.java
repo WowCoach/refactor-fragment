@@ -1,6 +1,5 @@
 package com.water.rover.command;
 
-import com.water.rover.command.ICommand;
 import com.water.rover.location.Direction;
 import com.water.rover.location.Location;
 import com.water.rover.location.Position;

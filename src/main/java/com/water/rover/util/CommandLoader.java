@@ -3,8 +3,8 @@ package com.water.rover.util;
 import java.util.Arrays;
 import java.util.List;
 
-public class LoadCommandUtil {
-    public static final List<String> valid_commands = Arrays.asList("L", "R", "M");
+public class CommandLoader {
+    private static final List<String> valid_commands = Arrays.asList("L", "R", "M");
 
     public static String[] convertInputIntoCommands(String input) {
         String[] commandArray = input.split("(?!^)");
