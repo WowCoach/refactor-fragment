@@ -6,6 +6,9 @@ public enum Direction {
     S("South", 2),
     W("West", 3);
 
+    private static final int CLOCKWISE_STEP = 1;
+    private static final int ANTI_CLOCKWISE_STEP = 3;
+
     private String value;
     private int index;
 
@@ -15,13 +18,11 @@ public enum Direction {
     }
 
     public Direction rotateClockwise() {
-        Direction[] directions = Direction.values();
-        return directions[(index + 1) % directions.length];
+        return values()[(index + CLOCKWISE_STEP) % values().length];
     }
 
 
     public Direction rotateAntiClockwise() {
-        Direction[] directions = Direction.values();
-        return directions[(index + 3) % directions.length];
+        return values()[(index + ANTI_CLOCKWISE_STEP) % values().length];
     }
 }
