@@ -4,9 +4,9 @@ import com.water.rover.enumeration.Direction;
 
 public class Location {
     private Direction direction;
-    private Position position;
+    private Point position;
 
-    public Location(Position position, Direction direction) {
+    public Location(Point position, Direction direction) {
         this.position = position;
         this.direction = direction;
     }
@@ -19,7 +19,7 @@ public class Location {
         return direction;
     }
 
-    public Position getPosition() {
+    public Point getPosition() {
         return position;
     }
 }

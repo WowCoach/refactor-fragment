@@ -7,7 +7,7 @@ import static com.water.rover.enumeration.Command.R;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.water.rover.command.ForwardCommand;
+import com.water.rover.command.MoveCommand;
 import com.water.rover.command.ICommand;
 import com.water.rover.command.LeftCommand;
 import com.water.rover.command.RightCommand;
@@ -18,7 +18,7 @@ public class CommandMapper {
     private static Map<Command, ICommand> commandMap = new HashMap<>();
 
     static {
-        commandMap.put(M, new ForwardCommand());
+        commandMap.put(M, new MoveCommand());
         commandMap.put(R, new RightCommand());
         commandMap.put(L, new LeftCommand());
     }

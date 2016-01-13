@@ -6,14 +6,14 @@ import static java.util.Arrays.stream;
 
 import com.water.rover.enumeration.Direction;
 import com.water.rover.location.Location;
-import com.water.rover.location.Position;
+import com.water.rover.location.Point;
 
 public class MarsRover {
 
     private Location location;
 
     public MarsRover(int startingX, int startingY, String direction) {
-        location = new Location(new Position(startingX, startingY), Direction.valueOf(direction));
+        location = new Location(new Point(startingX, startingY), Direction.valueOf(direction));
     }
 
     public String run(String input) {
