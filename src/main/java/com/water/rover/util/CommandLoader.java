@@ -1,8 +1,8 @@
 package com.water.rover.util;
 
-import static com.water.rover.enumeration.Command.L;
-import static com.water.rover.enumeration.Command.M;
-import static com.water.rover.enumeration.Command.R;
+import static com.water.rover.command.Command.L;
+import static com.water.rover.command.Command.M;
+import static com.water.rover.command.Command.R;
 import static java.util.Arrays.asList;
 import static java.util.Arrays.stream;
 

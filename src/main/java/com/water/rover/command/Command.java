@@ -1,4 +1,4 @@
-package com.water.rover.enumeration;
+package com.water.rover.command;
 
 public enum Command {
     L("Left"),

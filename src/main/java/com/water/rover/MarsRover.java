@@ -4,7 +4,7 @@ import static com.water.rover.util.CommandLoader.convertInputIntoCommands;
 import static com.water.rover.util.CommandMapper.getCommand;
 import static java.util.Arrays.stream;
 
-import com.water.rover.enumeration.Direction;
+import com.water.rover.location.Direction;
 import com.water.rover.location.Location;
 import com.water.rover.location.Point;
 

@@ -1,11 +1,11 @@
 package com.water.rover.command;
 
-import static com.water.rover.enumeration.Direction.*;
+import static com.water.rover.location.Direction.*;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import com.water.rover.enumeration.Direction;
+import com.water.rover.location.Direction;
 import com.water.rover.location.Location;
 import com.water.rover.location.Point;
 

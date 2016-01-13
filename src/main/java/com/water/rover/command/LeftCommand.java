@@ -1,6 +1,6 @@
 package com.water.rover.command;
 
-import com.water.rover.enumeration.Direction;
+import com.water.rover.location.Direction;
 import com.water.rover.location.Location;
 
 public class LeftCommand implements ICommand {

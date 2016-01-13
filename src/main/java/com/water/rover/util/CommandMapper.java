@@ -1,8 +1,8 @@
 package com.water.rover.util;
 
-import static com.water.rover.enumeration.Command.L;
-import static com.water.rover.enumeration.Command.M;
-import static com.water.rover.enumeration.Command.R;
+import static com.water.rover.command.Command.L;
+import static com.water.rover.command.Command.M;
+import static com.water.rover.command.Command.R;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +11,7 @@ import com.water.rover.command.MoveCommand;
 import com.water.rover.command.ICommand;
 import com.water.rover.command.LeftCommand;
 import com.water.rover.command.RightCommand;
-import com.water.rover.enumeration.Command;
+import com.water.rover.command.Command;
 
 public class CommandMapper {
 
