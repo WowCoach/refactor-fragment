@@ -40,7 +40,7 @@ public class MarsRover {
             }
         }
 
-        return asString();
+        return positionDirection();
     }
 
     private void move() {
@@ -57,7 +57,7 @@ public class MarsRover {
         }
     }
 
-    private String asString() {
+    private String positionDirection() {
         return position[X] + " " + position[Y] + " " + direction;
     }
 
