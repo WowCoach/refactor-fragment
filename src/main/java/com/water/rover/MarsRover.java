@@ -5,9 +5,9 @@ import java.util.List;
 
 public class MarsRover {
     // The valid commands (turn left, turn right, move)
-    public static final List<String> valid_commands = Arrays.asList("L", "R", "M");
+    public static final List<String> VALID_COMMANDS = Arrays.asList("L", "R", "M");
     // The four directions (North, East, South, West)
-    public static final List<String> directions = Arrays.asList("N", "E", "S", "W");
+    public static final List<String> DIRECTIONS = Arrays.asList("N", "E", "S", "W");
 
     public static final int Y = 1;
     public static final int X = 0;
@@ -23,6 +23,12 @@ public class MarsRover {
     public String run(String input) {
         String[] commands = convertInputIntoCommands(input);
 
+        excute(commands);
+
+        return positionDirectionAsString();
+    }
+
+    private void excute(String[] commands) {
         for (String command : commands) {
             switch (command) {
                 case "M":
@@ -39,8 +45,6 @@ public class MarsRover {
                     break;
             }
         }
-
-        return positionDirection();
     }
 
     private void move() {
@@ -57,16 +61,16 @@ public class MarsRover {
         }
     }
 
-    private String positionDirection() {
+    private String positionDirectionAsString() {
         return position[X] + " " + position[Y] + " " + direction;
     }
 
     private void turnLeft() {
-        direction = directions.get((directions.indexOf(direction) + 3) % directions.size());
+        direction = DIRECTIONS.get((DIRECTIONS.indexOf(direction) + 3) % DIRECTIONS.size());
     }
 
     private void turnRight() {
-        direction = directions.get((directions.indexOf(direction) + 1) % directions.size());
+        direction = DIRECTIONS.get((DIRECTIONS.indexOf(direction) + 1) % DIRECTIONS.size());
     }
 
     private static String[] convertInputIntoCommands(String input) {
@@ -79,7 +83,7 @@ public class MarsRover {
 
     private static void validateCommands(String input, String[] commandArray) {
         for (String command : commandArray) {
-            if (!valid_commands.contains(command)) {
+            if (!VALID_COMMANDS.contains(command)) {
                 throw new IllegalArgumentException("Invalid command sequence: " + input);
             }
         }
