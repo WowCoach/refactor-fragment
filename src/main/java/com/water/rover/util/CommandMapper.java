@@ -23,7 +23,7 @@ public class CommandMapper {
         commandMap.put(L, new LeftCommand());
     }
 
-    public static ICommand getCommand(String command) {
-        return commandMap.get(Command.valueOf(command));
+    public static ICommand getCommand(Command command) {
+        return commandMap.get(command);
     }
 }

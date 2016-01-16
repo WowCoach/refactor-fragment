@@ -2,7 +2,6 @@ package com.water.rover;
 
 import static com.water.rover.util.CommandLoader.convertInputIntoCommands;
 import static com.water.rover.util.CommandMapper.getCommand;
-import static java.util.Arrays.stream;
 
 import com.water.rover.location.Direction;
 import com.water.rover.location.Location;
@@ -17,7 +16,7 @@ public class MarsRover {
     }
 
     public String run(String input) {
-        stream(convertInputIntoCommands(input)).forEach(command ->
+        convertInputIntoCommands(input).forEach(command ->
                 location = getCommand(command).execute(location));
         return location.asString();
     }
